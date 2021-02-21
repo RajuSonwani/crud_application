@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    div(class=' w-50 mx-auto my-3' )
+        h2(class='my-3 mx-3') #{title}
+        //- form( class=' form-group my-3 mx-3' action= '/product/update/'+products.sno method='post')
+        //- or
+        form( class=' form-group my-3 mx-3' action= `/product/update/${products.sno}` method='post')
+            input(class='form-control my-3' type="text" value= products.sno name='sno' placeholder='serial no')
+            input(class='form-control my-3' type="text" value= products.item name='item' placeholder='product name')
+            input(class='form-control my-3' type="text" value= products.price name='price' placeholder='price')
+            button( class='btn btn-primary' type="submit") Save

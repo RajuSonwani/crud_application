@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h2(class='my-3 mx-3') Upload Files Here...!
+  hr
+  div.row
+    div.col-md-6
+      form(class=' form-group my-3 mx-3' action="/upload" method="post" enctype="multipart/form-data")
+        div.form-group
+          input(type="text" name="title" class="form-control" placeholder="Title")
+        div.form-group
+          input(type="file" name="blogimage", multiple)
+        button(type="submit" class="btn btn-info") upload

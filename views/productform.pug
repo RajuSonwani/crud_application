@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    //- div (class="alert alert-warning alert-dismissible fade show" role="alert")
+    //-     strong (success..! your data has been saved.)
+    //-     button (type="button" class="close" data-dismiss="alert" aria-label="Close")
+    //-         span (aria-hidden="true") &times;
+    div(class=' w-50 mx-auto my-3' )
+        h2(class='my-3 mx-3') #{title}
+        form( class=' form-group my-3 mx-3' action="/product/form" method='post')
+            input(class='form-control my-3' type="text" name='sno' placeholder='serial no')
+            input(class='form-control my-3' type="text" name='item' placeholder='product name')
+            input(class='form-control my-3' type="text" name='price' placeholder='price')
+            button( class='btn btn-primary' type="submit") Submit
